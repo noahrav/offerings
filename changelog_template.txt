@@ -1,0 +1,66 @@
+--------------- CHANGELOG TEMPLATE ---------------
+
+        (+ added    * edited    - removed)
+
+Fill in what you need to, remove what you don't.
+Descriptions are optional but appreciated :D
+
+!! Credit the contributors you added assets from !!
+!! Don't add/modify common events without asking !!
+
+|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|
+
+Developer: <DEV_NAME>
+Date: <DD/Mmm/YYYY> (ex. 01/Jan/2000)
+
+---------------------------------------------------
+Map policy ... <MAP_POLICY>
+Asset policy ... <ASSET_POLICY>
+---------------------------------------------------
++ MAP[XXXX] - <MAP_NAME>
+    + BGM <FILE_NAME> - map setting
+    * BGM <FILE_NAME> - event at (x,y)
+    + Connection from (x, y) to (x, y) in MAP[XXXX]
+    * Connection from (x, y) to (x, y) in MAP[XXXX] (one-way)
+    + Open/Closed connection at (x,y)
+* MAP[XXXX] - <MAP_NAME>
+- MAP[XXXX] - <MAP_NAME>
+---------------------------------------------------
++ CE[XXXX] - <COMMONEVENT_NAME>
+    | <DESCRIPTION> (optional)
+* CE[XXXX] - <COMMONEVENT_NAME>
+- CE[XXXX] - <COMMONEVENT_NAME>
+---------------------------------------------------
++ Tileset[XXXX] - <TILESET_NAME>
+* Tileset[XXXX] - <TILESET_NAME>
+- Tileset[XXXX] - <TILESET_NAME>
+---------------------------------------------------
++ S[XXXX] - <SWITCH_NAME>
+    | <DESCRIPTION> (optional)
+* S[XXXX] - <SWITCH_NAME>
+- S[XXXX] - <SWITCH_NAME>
+---------------------------------------------------
++ V[XXXX] - <VARIABLE_NAME>
+    | <DESCRIPTION> (optional)
+* V[XXXX] - <VARIABLE_NAME>
+- V[XXXX] - <VARIABLE_NAME>
+---------------------------------------------------
++ Animation[XXXX] - <BATTLEANIM_NAME>
+* Animation[XXXX] - <BATTLEANIM_NAME>
+- Animation[XXXX] - <BATTLEANIM_NAME>
+---------------------------------------------------
++ System <FILE_NAME> (<MENUTHEME_NAME>)
+---------------------------------------------------
++ CharSet <FILE_NAME> (by <CONTRIBUTOR_NAME>)
+---------------------------------------------------
++ ChipSet <FILE_NAME> (by <CONTRIBUTOR_NAME>)
+---------------------------------------------------
++ Music <FILE_NAME> (by <CONTRIBUTOR_NAME>)
+---------------------------------------------------
++ Sound <FILE_NAME> (by <CONTRIBUTOR_NAME>)
+---------------------------------------------------
++ Panorama <FILE_NAME> (by <CONTRIBUTOR_NAME>)
+---------------------------------------------------
++ Picture <FILE_NAME> (by <CONTRIBUTOR_NAME>)
+
+|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|

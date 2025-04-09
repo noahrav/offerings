@@ -1,0 +1,375 @@
+# Collective Unconscious guidelines
+
+**Collective Unconscious** is an open, collaborative game project inspired by Yume Nikki and its fangames, developed in RPG Maker 2003. You control Minnatsuki, a mysterious character wandering around a dream-like world full of spirits and otherworldly beings.
+
+The game is exclusively made for an online multiplayer experience, and hosted under the [Yume Nikki Online Project](https://ynoproject.net) website. Anyone can contribute to the project, as long as they respect the submission procedures and <#943590221025529866>.
+
+![The Nexus](assets/nexus.png)
+
+## What's a Developer? What's a Contributor?
+
+![Minnatsuki's bedroom](assets/bedroom.png)
+
+There are two ways in which you can contribute to Collective Unconscious:
+
+- **Becoming a Developer**: A Developer can add something to the game which requires a reservation of database entries (maps, switches, variables, tilesets and battle animations). <@&940597385523003465>
+- **__Becoming a Contributor__**: A Contributor can add something to the game which does not require any database entries to be reserved (music, sound effects, pictures, panoramas, unlockables, etc). <@&939659824113786950>
+
+You will obtain the role of Contributor or Developer as soon as your content is added in one of the game's updates.
+
+## Becoming a Developer
+
+![The Debug room](assets/debug.png)
+
+### How can I become a Developer?
+
+1. Check the <#939527111482413119>, <#943590221025529866>, <#1055957010409066576> and of course, <#1111932700144705578> channels thoroughly. It's a long but very important read!
+2. Fill out the **[Skills Base document](https://docs.google.com/spreadsheets/d/1Jq7XSVAZD1meZjSY4yYEZBC-cbbsN585tZNbx30Cd5I/edit?usp=sharing)**  with all the needed information.
+3. **Contact any <@&1131723955233902712>** to reserve database entries, as well as specifying your chosen Developer name for the game.
+
+> - You will be given the <@&951690252026789959> role, which grants you access to the build.
+> - You will then be given 10 database entries each for maps, tilesets, variables and switches. You can also reserve 10 battle animations entries if specifically requested.
+> - Your reserved entries only belong to you and no other <@&940597385523003465>. If you decide you no longer can or want to use them, you should tell any <@&1131723955233902712> so the entries can be cleared.
+> - Your database entries are visible in the **[Reservation List document](https://docs.google.com/spreadsheets/d/1H-f9iXSCZMGhCLny914neOCTLkf89xB_SwjTWR7UfJo/edit?usp=sharing)**.
+> - Please pick a developer name that you will feel comfortable keeping, as changing it is an laborious process.
+4. Make sure what you are developing is always **up to date** with the latest version of the game. You'll get access to the build after having reserved database entries.
+5. **Use our dev checklist and changelog template** to prepare your submission properly. This is a very important step and half of the work of a Developer, so **don't rush it**! Both of these documents can be found down below.
+6. **Send your submission in a compressed file** (.rar or .zip) to <@485690252317556736> or <@243013084510289921>. If it's too big for Discord's file limit, you can use Mediafire or Mega.
+Here's an example of how the inside of your zipped file should look like (please sort them out properly in their respective folders!):
+
+![Submission files example](assets/update_tutorial.png)
+*The archive should contain your changelog and your submission folder, which should contain the game files.*
+
+7. **Be prepared for potential bug fixing.** You should have playtested your maps before sending them to us, but it is possible you missed some bugs. If so, a <@&1131723955233902712> might DM you about it to fix them. Sometimes we will fix those ourselves, and sometimes you will have to take on that job and send your submission again. Be ready for it!
+8. **Be prepared for potential rejection.** If your submission has too many bugs or doesn't follow our <#943590221025529866> properly, it might not be accepted immediately and will have to undergo some changes on your side. Don't worry though, we will let you know what's wrong and give you some feedback on how to fix it. If you follow this feedback properly, your submission will be accepted!
+9. Unless some changes are still necessary, your content will appear in the game in the next update. **Congratulations! <:minnaThumbsup:1109881357586407474>**
+
+If you have any more questions or need clarifications on the process, let us know. Thank you and good luck, we are all looking forward to see what you create <:uroSleep:1193890857452052561>
+
+![Minnatsuki chilling in the Nexus](assets/lake.png)
+
+### The Dev Checklist
+
+**GENERAL**
+- [ ] Your submission follows the <#943590221025529866>
+- [ ] You are working on the latest <#951155943633207336>
+- [ ] Your are using your own database entries IDs 
+- [ ] You are allowed to use the assets you are using
+
+**PLAYTESTING**
+- [ ] Passability is properly set on all tilesets/events
+- [ ] All events work and interact properly with all effects/keys
+- [ ] All warps work properly, both ways
+- [ ] All warps (world-to-world AND warps within the same map/world) include the following CEs: 11 - Disable Actions, 12 - Enable Actions
+- [ ] All world-to-world warps include the CE 20 - Map Transition
+- [ ] All images/parallaxes are properly placed, regardless of the connection from which you enter the map
+- [ ] All music/sound effects work and loop properly, and are well-balanced
+
+**FILES TO INCLUDE**
+- [ ] RPG_RT.lmt
+- [ ] RPG_RT.ldb
+- [ ] New **and** edited maps *(.lmu)* [⚠️ Don't forget the updated maps with your new connections ⚠️]
+- [ ] New **and** edited tilesets
+- [ ] New **and** edited charsets
+- [ ] New **and** edited music files *(.wav)*
+- [ ] New **and** edited sound effects *(.wav)*
+- [ ] New **and** edited panoramas
+- [ ] New **and** edited pictures
+- [ ] New **and** edited battle animations
+
+**CHANGELOG**
+
+**[Changelog template text file](changelog_template.txt)**
+
+**Please download and use the template provided above, or use the changelog generator below.**
+
+- [ ] Your developer name is shown
+- [ ] The date is shown
+- [ ] Your changelog is properly formatted
+
+- [ ] Map policy
+     (who is allowed to edit and/or add content to your maps, and in what ways: open connections only, can create a warp but it has to be this specific shape/color, etc.)
+- [ ] Asset policy
+      (who is allowed to use and/or edit the assets you made)
+
+- [ ] Added/Edited/Removed maps (ID and name)
+- [ ] Added/Edited/Removed connections (one-way/both-way/unlocked connection from the other side)
+     - **Don't forget to write down the coordinates of the warps!**
+     - Note: you only have to note connections from a world to another!
+- [ ] Added/Edited/Removed open/closed connections (if you've added/removed an open/closed connection, if you've changed the coordinates of one, if you or another dev has taken one)
+
+- [ ] Added/Edited/Removed tilesets, switches, variables, animations, systems (ID and name)
+
+- [ ] Events that contain a music change and their coordinates on the map (needed for record player)
+- [ ] If you've modified the music of a map/event (needed for record player)
+
+- [ ] Added/Edited/Removed assets (charset, chipset, music, sound, panorama, picture...)
+	- If they were made by other contributors, credit them!
+
+**PATCH GENERATOR**
+
+Mossball is a program which automatically generates both the changelog and the compressed patch file. You can download it **[Here](https://github.com/lumiscosity/mossball/releases)**.
+
+**Usage:**
+
+You will be asked first to select an unmodified copy of the most recent build, then the copy you edited. **You have to select the folder that directly contains the project files (MapXXXX.lmu and others)**. You can then select the individual files to include or exclude, then proceed to creating a changelog. Mossball will automatically detect BGMs in maps and connections.
+
+**Don't forget to add your developer name, policies, open connections and menu theme names!**
+
+**Support:**
+
+If you encounter any issues with Mossball, please contact <@243013084510289921>
+
+Mossball is licensed under the GPLv3. More information and the included libraries can be found in the [official repository](https://github.com/lumiscosity/mossball).
+
+## Developing - Connecting Maps
+
+![Minnastuki standing on the Nexus bridge](assets/bridge.png)
+
+### What guarantees that I can connect my map to another map?
+
+Collective Unconscious uses a system that helps you identify if a connection is closed (X) or open (O).
+- Any warp/path having an "X" sign means other developers can't connect their maps to it.
+- Any warp/path having an "O" sign means other developers can connect their maps to it.
+
+If a path is blocked without any of these indications, you have two options: either check the <@&940597385523003465>'s map policies, or assume it is a closed connection (unless it is a Nexus world).
+
+![Connection signs](assets/connection_signs.png)
+*Closed (X) and Open (O) connection signs*
+
+### How do I submit an open connection?
+
+Simply place an open connection sign in your world at the desired location and **note it in your changelog** (including the coordinates). A <@&1131723955233902712> will add it to the [Connections Document](https://docs.google.com/spreadsheets/d/1D1gn9FtWGWsrHylgFvlNQ6Uar0kHx7S-ULzVR7iLpZE/edit#gid=0) when the new build is released.
+
+> Please try to keep worlds to **5 open connections or fewer**. You can discuss with a <@&1131723955233902712> if you think your world calls for more connections, but it is likely to not be accepted except in rare circumstances.
+> 
+### How do I claim an open connection?
+
+1. **Check the Connection Requests page** (page 3 of the [Connections Document](https://docs.google.com/spreadsheets/d/1D1gn9FtWGWsrHylgFvlNQ6Uar0kHx7S-ULzVR7iLpZE/edit#gid=0)) to see if the connection you want is free. 
+
+2. **Talk to the <@&940597385523003465> of the world and confirm whether they’re okay with you taking the connection.** Even if it is an open connection, it’s best practice to discuss it with the dev. If you can’t contact the developer for some reason, contact a <@&1131723955233902712>. 
+
+3. **Fill out the [Connection Request form](https://forms.gle/vzCzeJU4sJxkMDNP9)**. Cross reference the document to get the correct connection letter and world number. Everything needs to be formatted *exactly* as the instructions say, or else your request *will not be added*!
+
+4. **Confirm that the Connection Requests page added your submission**. If it did not, you may have put in information incorrectly, so please try resubmitting or contacting <@371367860720893955> or another <@&1131723955233902712>.
+
+5. If you no longer wish to claim an open connection, **contact <@371367860720893955> to have the request removed**.
+
+![The Treehouse](assets/treehouse.png)
+
+### How does the Connections document work?
+
+The [Connections Document](https://docs.google.com/spreadsheets/d/1D1gn9FtWGWsrHylgFvlNQ6Uar0kHx7S-ULzVR7iLpZE/edit#gid=0) has three pages: 1 Connections (Depth), 2 Connections (Priority), and 3 Connection Requests.
+
+#### Connections (Depth) and Connections (Priority)
+
+The same page, just organized differently. These pages show in-depth information on each world in the game, organising them by depth (with the Nexus being 0) and priority respectively. These pages show the status of the most recent build on release and will not be updated until the next build is released. 
+
+#### What is Priority?
+
+Priority is a measurement of how important it is that the open connections in the world be filled. Older, lower depth worlds with fewer connections take higher priority. You can take any connection that is available, but please give special consideration to high priority ones. Events like Collective Creations will also be run throughout the year to focus on filling high priority connections. 
+
+The priority formula works as follows:
+- Amount of children: 25% $\times$ (the less child worlds -> higher value)
+- Open connections: 25% $\times$ (the more openC -> higher value)
+- Depth: 30% $\times$ (the lower depth -> higher value)
+- Version: 20% $\times$ (the older version -> higher value)
+
+#### Connection Requests
+
+This page is connected to the Connection Request form. It is the source of truth for who has taken a connection, in order to avoid conflicts. Form submissions operate on a **first come, first serve basis** (i.e. if you submit for a connection someone has already claimed, your request will not overwrite theirs). The page is ordered by priority.
+
+#### What if I see incorrect information?
+
+Contact <@371367860720893955>. Any missed connections will be manually added. Anything not currently in the build will not be added to the document. Information may be removed in extreme cases, such as your entire world getting an overhaul and no current connections being relevant anymore.
+
+The open connection process has been formalized in order to avoid conflicts on connection claims.
+
+> For any inquiry about the connection process, **please contact <@371367860720893955>**.
+
+## Becoming a Contributor - Using the Repository
+
+![Minnatsuki sitting on the treehouse balcony](assets/balcony.png)
+
+### How can I become a Contributor?
+
+First and formost, you should fill out the **[Skills Base document](https://docs.google.com/spreadsheets/d/1Jq7XSVAZD1meZjSY4yYEZBC-cbbsN585tZNbx30Cd5I/edit?usp=sharing)** with all the needed information.
+
+There are two ways of becoming a contributor:
+
+1. **Uploading the content** you wish to contribute to the contribution repository. Please note that there is no guarantee your content will be used, unless you:
+
+2. **Bundling your content along with a <@&940597385523003465>'s update**, if you and the Developer have decided to work together. In that case, there is no need to use the content repository (unless you want other Developers to be able to use your content!). Make sure you are credited when the Developer submits their update.
+
+> Please pick a contributor name that you will feel comfortable keeping, as changing it is a **laborious process**.
+
+![Minnatsuki sitting on a bench in the Nexus](assets/bench.png)
+
+### What's a repository?
+
+The repository is a database containing a collection of various assets (music, sounds, charsets, tilesets, panoramas...) made by other Contributors. Developers can use any of these assets on their maps, as long as they credit the Contributor.
+
+### How can I access the repository?
+
+1. **If you want to add files to the repository**, contact a <@&1131723955233902712> so she can give you access to a specific channel explaining the process. The <@&951690252026789959> role also gives you access to this channel!
+> -  Your music and sound files should always be in __wav__ format.
+> - Music files must be limited to 30 characters.
+> - It is highly recommended to put your contributor name in the file name as a __prefix__ (like this: contribname_title.wav)
+> - We highly recommend that you add a __read_me text file__ containing your asset policies, explaining how others can use your assets.
+
+2. **If you want to use any of the assets as a Developer**, make sure to check if they have any [asset policy](https://docs.google.com/document/d/1n1d-eS4kl3Ko6LEhN78mEz9o9rKHYkkLhPkZdNQZ5FM/edit?usp=sharing), and let the Contributor know you are using their asset. If you don't get an answer from them, and you are respecting their policy, you can assume you are allowed to use their assets!
+3. 
+## Contributing a Book Cover
+
+![The Book](assets/book.png)
+
+### What is a Book Cover?
+
+Book covers are collectibles similar to Yume 2kki's PC wallpapers. They are unlockable under certain conditions (visiting a map, interacting with an event, etc.). Anyone can contribute a book cover as long as they follow the requirements!
+
+### How to make a Book Cover?
+
+__Cover specifications:__
+- Image dimensions of 218x282 pixels (width, height)
+- RGB color accepted (8-bit indexed is not required)
+- No transparency
+
+Your cover image will be animated by a script to match the book's opening animation, so some parts of the original image will not be visible when the book is closed. You can use this template to work your design around that.
+
+- **Green:** Visible when the book is closed.
+- **Blue:** Visible only during animation.
+- **Grey:** Only visible on thumbnails.
+
+![Cover image specifications](assets/cover-regions_1.png)
+![Cover image specifications](assets/cover-example.png)
+
+To make the cover design look nice with the notebook rings, we recommend avoiding bright and saturated tones in the leftmost edge of the cover design. A subtle gradient or side pattern can help if your design uses brighter tones.
+
+All relevant information is compiled into the images below for quick reference:
+
+![Cover image specifications summary](assets/cover-specifications_1.png)
+
+### How to submit a Book Cover?
+
+Fill in the **[Google Form](https://docs.google.com/forms/d/e/1FAIpQLSe3zY1jmUGhdrv9WaZIjL-nYJ4rOTnKG7ORTgASaqLtPcN1aA/viewform)** with all the necessary information:
+- Title
+- Contributor name
+- Detailed description of the conditions required for the player to obtain/unlock your cover
+- Direct link to your image (Discord or Imgur)
+
+## Contributing Vending Machine Items
+
+![Minnatsuki sitting on a bench in Pale Park, next to a vending machine](assets/pale_park_vm.png)
+
+### What are Vending Machine Items?
+
+Vending machine items are another type of collectible that can be found by interacting with a vending machine.
+
+### How to contribute Vending Machine Items?
+
+Every step is explained in <@286249320838332416>'s **vending machine tutorial document** that can be found right below. However, before submitting an item, there is a reservation process to follow:
+
+1. Reserve battle animation entries.
+2. Once you are **100% sure** your item is done and ready to be implemented for the next build, **contact a <@&1131723955233902712> to reserve a vending machine item slot** for it.
+3. You can now follow the tutorial and send us an update with the new items (don't forget to write it in the changelog)!
+
+This process is here to prevent overlapping of vending machine item IDs in case someone else has submitted an update with a new item.
+
+**[Vending machine tutorial PDF file](vending_machine_tutorial.pdf)**
+
+## Contributing Menu Themes
+
+![Menu theme selection in the Book](assets/menu_themes.png)
+
+### What are Menu Themes?
+
+Menu Themes are a type of collectible that can be found in worlds, changing the look of a player's menu. They can be obtained by a variety of means, from simply interacting with an object to completing events. 
+
+### How to contribute Menu Themes?
+
+Similar to vending machine items, there is a reservation process to follow before submitting a menu theme:
+
+1. Make **100% sure** your menu theme is done and ready to be implemented for the next build. This includes creating a finalised system file (menu theme), as well as setting up/making sure of the conditions for obtaining said menu theme in game. 
+> If your menu theme is obtained from interacting with an object, make sure you are sure of and have completed the designated location for it.
+> If your menu theme is obtained after an event, make sure the creation of that event is completed.
+
+2. Once you are 100% sure your menu theme is done and ready to be implemented, **contact a <@&1131723955233902712> to reserve a Menu Theme ID**.
+3. Once you have been given your Menu Theme ID, edit **CE 29 - Reset Menu Theme**:
+
+- Scroll down to the bottom of the CE and create a new conditional branch. The easiest way to do so is to copy a previous entry.
+- Edit the conditional branch and change the constant number to your given Menu Theme ID.
+- Edit the change system graphic command to your own menu theme.
+
+Below is an example of how your entry should be formatted:
+
+![An example of a menu theme code entry](assets/menu_theme_code.png)
+*A conditional branch on variable 0116 encapsulates a 'Change System Graphic' command.*
+
+4. Implement your **Menu Theme event**.
+
+The important commands are:
+- Setting Variable 91 to your given Menu Theme ID.
+- Calling CE 28 - Unlock Menu Theme.
+
+Below is an example of what a menu theme unlocked by interacting with an event looks like:
+
+![An example of a menu theme unlock event](assets/menu_theme_unlock_event.png)
+
+5. **OPTIONAL** - create a Menu Theme cube. 
+
+If your menu theme is unlocked by interaction, you can create your own Menu Theme cube graphic to go with it! 
+- Edit the charset awu_menuthemes.png to include your menu theme cube graphic
+- Submit the edited charset along with your update (make sure to write it in the changelog!)
+
+Note: Menu Theme cubes are the recommended standard for all menu themes, but you can still create your own custom graphic/method of obtaining if you'd like.
+
+![Menu theme cube charset](assets/menu_theme_cubes.png)
+
+5. Send us an update with the new menu theme (don't forget the changelog)!
+
+Disclaimer: Although you have finished these tasks, note that your menu theme has **not been fully implemented yet**! Managers have to take care of updating CE 28 - Unlock Menu Theme, as well as implementing your menu theme in the book. By helping us with the tasks above, you can make things all the more easier for us <:uroSleep:1193890857452052561> 
+
+The reservation process is here to prevent overlapping of Menu Theme IDs in case someone else has submitted an update with a new menu theme.
+
+## Contributing Terrains
+
+![Minnatsuki chilling in the Nexus - The Return](assets/lake.png)
+
+## What are Terrains?
+
+Terrains allow for the different step sounds you hear in maps. Similar to vending machine items and menu themes, they require a reservation process.
+
+### How to contribute Terrains?
+
+1. Once you are **100% sure** your terrain sound is ready for the next build, contact a <@&1131723955233902712> to reserve a Terrain ID. 
+> Note that you will be given **2 IDs for a terrain**. Each terrain requires a regular ID, as well as an alternative ID (Alt). This is so Developers can implement shadow tinting via terrain in their maps if they wish.
+
+2. Once you have been given your Terrain ID, **edit CE 16 - Coord/Step Calc**:
+
+For each new terrain, you have to add a conditional branch. It always is formatted like this:
+@>Conditional Branch: Variable [0040:Terrain ID] == `Number`
+       @>Comment: `Name` Terrain ID
+       @>Play SE: '`Sound effect file name`', values
+       @>Jump to Label: 1
+
+- Scroll down to the bottom of the CE and create a new conditional branch. The easiest way to do so is to copy a previous entry.
+- Edit the conditional branch and change the constant number to your given Terrain ID.
+- Edit the comment to reflect the name of your terrain ID.
+- Edit the Play SE command to your own terrain sound.
+- Make sure to create another conditional branch for the alternative ID (Alt).
+
+Below is an example of how your entry should be formatted:
+
+![Terrain implementation example](assets/terrain_code.png)
+
+3. In the "Terrain" section of the database, **increase the maximum number of terrains** and **add a name to your terrains**.
+
+> ⚠️ It is important that here, you **do not set terrain sounds using the in-engine footstep sound picker**. Terrain sounds are done through the Coord/Step Calc CE instead in order to easily allow effects (eg. Lumen and Spectral) to have custom step sounds.
+
+![Terrain IDs](assets/terrain_edit_menu.png)
+
+4. Make sure you playtest your footstep sounds to see if their **volume level is well adjusted** in comparison to other footstep sounds/menu sounds!
+
+5. Send us an update with the new terrain (don't forget the changelog)!
+
+This process is here to prevent overlapping of terrain IDs in case someone else has submitted an update with a new terrain.
