@@ -2,9 +2,36 @@
 
 **Collective Unconscious** is an open, collaborative game project inspired by Yume Nikki and its fangames, developed in RPG Maker 2003. You control Minnatsuki, a mysterious character wandering around a dream-like world full of spirits and otherworldly beings.
 
-The game is exclusively made for an online multiplayer experience, and hosted under the [Yume Nikki Online Project](https://ynoproject.net) website. Anyone can contribute to the project, as long as they respect the submission procedures and <#943590221025529866>.
+The game is exclusively made for an online multiplayer experience, and hosted under the [Yume Nikki Online Project](https://ynoproject.net) website. Anyone can contribute to the project, as long as they respect the submission procedures and rules outlined in the #guidelines channel on Discord.
 
 ![The Nexus](assets/nexus.png)
+
+## Table of Contents
+
+- [Introduction](#collective-unconscious-guidelines)
+
+- [What's a Developer? What's a Contributor?](#whats-a-developer-whats-a-contributor)
+
+- [Becoming a Developer](#becoming-a-developer)
+	- [The Dev Checklist](#the-dev-checklist)
+ 	- [What if I leave the project?](#what-if-i-leave-the-project)
+
+- [Developing - Connecting Maps](#developing---connecting-maps)
+
+- [Becoming a Contributor - Using the Repository](#becoming-a-contributor---using-the-repository)
+	- [What's a repository?](#whats-a-repository)
+
+- [Contributing a Book Cover](#contributing-a-book-cover)
+
+- [Contributing Vending Machine Items](#contributing-vending-machine-items)
+
+- [Contributing Menu Themes](#contributing-menu-themes)
+
+- [Contributing Terrains](#contributing-terrains)
+
+- [Contributing Pseudo-eidola](#contributing-pseudo-eidola)
+
+- [Contributing Visages](#contributing-visages)
 
 ## What's a Developer? What's a Contributor?
 
@@ -12,8 +39,8 @@ The game is exclusively made for an online multiplayer experience, and hosted un
 
 There are two ways in which you can contribute to Collective Unconscious:
 
-- **Becoming a Developer**: A Developer can add something to the game which requires a reservation of database entries (maps, switches, variables, tilesets and battle animations). <@&940597385523003465>
-- **__Becoming a Contributor__**: A Contributor can add something to the game which does not require any database entries to be reserved (music, sound effects, pictures, panoramas, unlockables, etc). <@&939659824113786950>
+- **Becoming a Developer**: A Developer can add something to the game which requires a reservation of database entries (maps, switches, variables, tilesets and battle animations). This role is represented in the server as @Zone Weaver (Developer).
+- **__Becoming a Contributor__**: A Contributor can add something to the game which does not require any database entries to be reserved (music, sound effects, pictures, panoramas, unlockables, etc). This role is represented in the server as @Wandering Ghost (Contributor).
 
 You will obtain the role of Contributor or Developer as soon as your content is added in one of the game's updates.
 
@@ -23,36 +50,40 @@ You will obtain the role of Contributor or Developer as soon as your content is 
 
 ### How can I become a Developer?
 
-1. Check the <#939527111482413119>, <#943590221025529866>, <#1055957010409066576> and of course, <#1111932700144705578> channels thoroughly. It's a long but very important read!
+1. Check the ⁠#read_me_👁, ⁠#guidelines, and #⁠important_links channels, as well as this wiki, thoroughly. It's a long but very important read!
 2. Fill out the **[Skills Base document](https://docs.google.com/spreadsheets/d/1Jq7XSVAZD1meZjSY4yYEZBC-cbbsN585tZNbx30Cd5I/edit?usp=sharing)**  with all the needed information.
-3. **Contact any <@&1131723955233902712>** to reserve database entries, as well as specifying your chosen Developer name for the game.
+3. **Contact any @Spirit Guide (Manager)** to reserve database entries, as well as specifying your chosen Developer name for the game.
 
-> - You will be given the <@&951690252026789959> role, which grants you access to the build.
+> - You will be given the @🗝️ Spirit Key role, which grants you access to the build.
 > - You will then be given 10 database entries each for maps, tilesets, variables and switches. You can also reserve 10 battle animations entries if specifically requested.
-> - Your reserved entries only belong to you and no other <@&940597385523003465>. If you decide you no longer can or want to use them, you should tell any <@&1131723955233902712> so the entries can be cleared.
+> - Your reserved entries only belong to you and no other @Zone Weaver (Developer). If you decide you no longer can or want to use them, you should tell any @Spirit Guide (Manager) so the entries can be cleared.
 > - Your database entries are visible in the **[Reservation List document](https://docs.google.com/spreadsheets/d/1H-f9iXSCZMGhCLny914neOCTLkf89xB_SwjTWR7UfJo/edit?usp=sharing)**.
 > - Please pick a developer name that you will feel comfortable keeping, as changing it is an laborious process.
 4. Make sure what you are developing is always **up to date** with the latest version of the game. You'll get access to the build after having reserved database entries.
 5. **Use our dev checklist and changelog template** to prepare your submission properly. This is a very important step and half of the work of a Developer, so **don't rush it**! Both of these documents can be found down below.
-6. **Send your submission in a compressed file** (.rar or .zip) to <@485690252317556736> or <@243013084510289921>. If it's too big for Discord's file limit, you can use Mediafire or Mega.
+6. **Write an explanation for any complex or hidden events**. This will be used by managers during playtesting. You can include it in the changelog or as a separate file, if you would like it to remain hidden (as changelogs become public after release).
+> - **What counts as a complex event?** This is any event whose workings cannot be quickly discerned upon opening a single event tile. This includes things like events using local switches and variables (as they cannot be renamed to explain their uses clearly), events with multiple page states that aren’t just tied to simple conditions like equipping an effect, and puzzles with multiple steps (solutions for puzzles should be included). When in doubt, it is better to over-explain than under-explain, so either include those that you’re unsure of or simply ask!
+7. **Send your submission in a compressed file** (.rar or .zip) to any @Spirit Guide (Manager)  when submissions are open. If it's too big for Discord's file limit, you can use Mediafire, Mega, or catbox.
 Here's an example of how the inside of your zipped file should look like (please sort them out properly in their respective folders!):
 
 ![Submission files example](assets/update_tutorial.png)
 *The archive should contain your changelog and your submission folder, which should contain the game files.*
 
-7. **Be prepared for potential bug fixing.** You should have playtested your maps before sending them to us, but it is possible you missed some bugs. If so, a <@&1131723955233902712> might DM you about it to fix them. Sometimes we will fix those ourselves, and sometimes you will have to take on that job and send your submission again. Be ready for it!
-8. **Be prepared for potential rejection.** If your submission has too many bugs or doesn't follow our <#943590221025529866> properly, it might not be accepted immediately and will have to undergo some changes on your side. Don't worry though, we will let you know what's wrong and give you some feedback on how to fix it. If you follow this feedback properly, your submission will be accepted!
-9. Unless some changes are still necessary, your content will appear in the game in the next update. **Congratulations! <:minnaThumbsup:1109881357586407474>**
+8. **Be prepared for potential bug fixing.** You should have playtested your maps before sending them to us, but it is possible you missed some bugs. If so, a @Spirit Guide (Manager) might DM you about it to fix them. Sometimes we will fix those ourselves, and sometimes you will have to take on that job and send your submission again. Be ready for it!
+9. **Be prepared for potential rejection.** If your submission has too many bugs or doesn't follow our rules and guidelines properly, it might not be accepted immediately and will have to undergo some changes on your side. Don't worry though, we will let you know what's wrong and give you some feedback on how to fix it. If you follow this feedback properly, your submission will be accepted!
+10. Unless some changes are still necessary, your content will appear in the game in the next update. **Congratulations!**
 
-If you have any more questions or need clarifications on the process, let us know. Thank you and good luck, we are all looking forward to see what you create <:uroSleep:1193890857452052561>
+If you have any more questions or need clarifications on the process, let us know. Also consider reading through the [Developer's Handbook](https://docs.google.com/document/d/1eo9GmPM5MAAsaz1KWY_RLCBH8NZ1pUcQx6J3LlVsnMQ/edit?usp=sharing), which contains documentation of switches, variables, and common events, frequently asked questions, and various guidelines and tutorials.
+
+Thank you and good luck, we are all looking forward to see what you create.
 
 ![Minnatsuki chilling in the Nexus](assets/lake.png)
 
 ### The Dev Checklist
 
 **GENERAL**
-- [ ] Your submission follows the <#943590221025529866>
-- [ ] You are working on the latest <#951155943633207336>
+- [ ] Your submission follows the guidelines
+- [ ] You are working on the latest dev build
 - [ ] Your are using your own database entries IDs 
 - [ ] You are allowed to use the assets you are using
 
@@ -92,7 +123,10 @@ If you have any more questions or need clarifications on the process, let us kno
 - [ ] Asset policy
       (who is allowed to use and/or edit the assets you made)
 
-- [ ] Added/Edited/Removed maps (ID and name)
+- [ ] Added/Edited/Removed maps (ID and name) 
+	- [ ] Official world names to be included on the wiki are specified
+	- [ ] Subareas are specified
+	- [ ] Inaccessible maps are clearly marked
 - [ ] Added/Edited/Removed connections (one-way/both-way/unlocked connection from the other side)
      - **Don't forget to write down the coordinates of the warps!**
      - Note: you only have to note connections from a world to another!
@@ -100,6 +134,7 @@ If you have any more questions or need clarifications on the process, let us kno
 
 - [ ] Added/Edited/Removed tilesets, switches, variables, animations, systems (ID and name)
 
+- [ ] Music details per map, including filename, volume, and tempo
 - [ ] Events that contain a music change and their coordinates on the map (needed for record player)
 - [ ] If you've modified the music of a map/event (needed for record player)
 
@@ -118,9 +153,18 @@ You will be asked first to select an unmodified copy of the most recent build, t
 
 **Support:**
 
-If you encounter any issues with Mossball, please contact <@243013084510289921>
+If you encounter any issues with Mossball, please contact @lumiscosity.
 
 Mossball is licensed under the GPLv3. More information and the included libraries can be found in the [official repository](https://github.com/lumiscosity/mossball).
+
+### What if I leave the project?
+In the event that a developer leaves the project and is uncontactable for one year (including being specifically asked not to be contacted) and no alternatives have been specified, the following default rule will take effect:
+
+- The developer's maps can be updated to support new eidola as applicable.
+- If the map has open connections or was listed in the Map and Asset Policy as "message to connect", anyone can add a connection.
+- Closed connections will remain closed and may be blocked off so that players recognize they will not be updated in the future.
+
+At any time, a developer may update their Map and Asset Policy to specify an alternative set of rules, including on a per-map basis. (Examples: one map cannot be touched at all, a specific developer inherits certain maps, all maps can be freely edited, etc.)
 
 ## Developing - Connecting Maps
 
@@ -132,28 +176,28 @@ Collective Unconscious uses a system that helps you identify if a connection is 
 - Any warp/path having an "X" sign means other developers can't connect their maps to it.
 - Any warp/path having an "O" sign means other developers can connect their maps to it.
 
-If a path is blocked without any of these indications, you have two options: either check the <@&940597385523003465>'s map policies, or assume it is a closed connection (unless it is a Nexus world).
+If a path is blocked without any of these indications, you have two options: either check the @Zone Weaver (Developer)'s map policies, or assume it is a closed connection (unless it is a Nexus world).
 
 ![Connection signs](assets/connection_signs.png)
 *Closed (X) and Open (O) connection signs*
 
 ### How do I submit an open connection?
 
-Simply place an open connection sign in your world at the desired location and **note it in your changelog** (including the coordinates). A <@&1131723955233902712> will add it to the [Connections Document](https://docs.google.com/spreadsheets/d/1D1gn9FtWGWsrHylgFvlNQ6Uar0kHx7S-ULzVR7iLpZE/edit#gid=0) when the new build is released.
+Simply place an open connection sign in your world at the desired location and **note it in your changelog** (including the coordinates). A @Spirit Guide (Manager) will add it to the [Connections Document](https://docs.google.com/spreadsheets/d/1D1gn9FtWGWsrHylgFvlNQ6Uar0kHx7S-ULzVR7iLpZE/edit#gid=0) when the new build is released.
 
-> Please try to keep worlds to **5 open connections or fewer**. You can discuss with a <@&1131723955233902712> if you think your world calls for more connections, but it is likely to not be accepted except in rare circumstances.
+> Please try to keep worlds to **5 open connections or fewer**. You can discuss with a @Spirit Guide (Manager) if you think your world calls for more connections, but it is likely to not be accepted except in rare circumstances.
 > 
 ### How do I claim an open connection?
 
 1. **Check the Connection Requests page** (page 3 of the [Connections Document](https://docs.google.com/spreadsheets/d/1D1gn9FtWGWsrHylgFvlNQ6Uar0kHx7S-ULzVR7iLpZE/edit#gid=0)) to see if the connection you want is free. 
 
-2. **Talk to the <@&940597385523003465> of the world and confirm whether they’re okay with you taking the connection.** Even if it is an open connection, it’s best practice to discuss it with the dev. If you can’t contact the developer for some reason, contact a <@&1131723955233902712>. 
+2. **Talk to the @Zone Weaver (Developer) of the world and confirm whether they’re okay with you taking the connection.** Even if it is an open connection, it’s best practice to discuss it with the dev. If you can’t contact the developer for some reason, contact a @Spirit Guide (Manager). 
 
 3. **Fill out the [Connection Request form](https://forms.gle/vzCzeJU4sJxkMDNP9)**. Cross reference the document to get the correct connection letter and world number. Everything needs to be formatted *exactly* as the instructions say, or else your request *will not be added*!
 
-4. **Confirm that the Connection Requests page added your submission**. If it did not, you may have put in information incorrectly, so please try resubmitting or contacting <@371367860720893955> or another <@&1131723955233902712>.
+4. **Confirm that the Connection Requests page added your submission**. If it did not, you may have put in information incorrectly, so please try resubmitting or contacting @nacremoon or another @Spirit Guide (Manager).
 
-5. If you no longer wish to claim an open connection, **contact <@371367860720893955> to have the request removed**.
+5. If you no longer wish to claim an open connection, **contact @nacremoon to have the request removed**.
 
 ![The Treehouse](assets/treehouse.png)
 
@@ -181,11 +225,11 @@ This page is connected to the Connection Request form. It is the source of truth
 
 #### What if I see incorrect information?
 
-Contact <@371367860720893955>. Any missed connections will be manually added. Anything not currently in the build will not be added to the document. Information may be removed in extreme cases, such as your entire world getting an overhaul and no current connections being relevant anymore.
+Contact @nacremoon. Any missed connections will be manually added. Anything not currently in the build will not be added to the document. Information may be removed in extreme cases, such as your entire world getting an overhaul and no current connections being relevant anymore.
 
 The open connection process has been formalized in order to avoid conflicts on connection claims.
 
-> For any inquiry about the connection process, **please contact <@371367860720893955>**.
+> For any inquiry about the connection process, **please contact @nacremoon**.
 
 ## Becoming a Contributor - Using the Repository
 
@@ -199,7 +243,7 @@ There are two ways of becoming a contributor:
 
 1. **Uploading the content** you wish to contribute to the contribution repository. Please note that there is no guarantee your content will be used, unless you:
 
-2. **Bundling your content along with a <@&940597385523003465>'s update**, if you and the Developer have decided to work together. In that case, there is no need to use the content repository (unless you want other Developers to be able to use your content!). Make sure you are credited when the Developer submits their update.
+2. **Bundling your content along with a @Zone Weaver (Developer)'s update**, if you and the Developer have decided to work together. In that case, there is no need to use the content repository (unless you want other Developers to be able to use your content!). Make sure you are credited when the Developer submits their update.
 
 > Please pick a contributor name that you will feel comfortable keeping, as changing it is a **laborious process**.
 
@@ -211,14 +255,14 @@ The repository is a database containing a collection of various assets (music, s
 
 ### How can I access the repository?
 
-1. **If you want to add files to the repository**, contact a <@&1131723955233902712> so she can give you access to a specific channel explaining the process. The <@&951690252026789959> role also gives you access to this channel!
+1. **If you want to add files to the repository**, contact a @Spirit Guide (Manager) so she can give you access to a specific channel explaining the process. The @🗝️ Spirit Key role also gives you access to this channel!
 > -  Your music and sound files should always be in __wav__ format.
 > - Music files must be limited to 30 characters.
 > - It is highly recommended to put your contributor name in the file name as a __prefix__ (like this: contribname_title.wav)
 > - We highly recommend that you add a __read_me text file__ containing your asset policies, explaining how others can use your assets.
 
 2. **If you want to use any of the assets as a Developer**, make sure to check if they have any [asset policy](https://docs.google.com/document/d/1n1d-eS4kl3Ko6LEhN78mEz9o9rKHYkkLhPkZdNQZ5FM/edit?usp=sharing), and let the Contributor know you are using their asset. If you don't get an answer from them, and you are respecting their policy, you can assume you are allowed to use their assets!
-3. 
+
 ## Contributing a Book Cover
 
 ![The Book](assets/book.png)
@@ -232,6 +276,7 @@ Book covers are collectibles similar to Yume 2kki's PC wallpapers. They are unlo
 __Cover specifications:__
 - Image dimensions of 218x282 pixels (width, height)
 - RGB color accepted (8-bit indexed is not required)
+- PNG format
 - No transparency
 
 Your cover image will be animated by a script to match the book's opening animation, so some parts of the original image will not be visible when the book is closed. You can use this template to work your design around that.
@@ -255,7 +300,7 @@ Fill in the **[Google Form](https://docs.google.com/forms/d/e/1FAIpQLSe3zY1jmUGh
 - Title
 - Contributor name
 - Detailed description of the conditions required for the player to obtain/unlock your cover
-- Direct link to your image (Discord or Imgur)
+- Direct link to your image (catbox or Imgur)
 
 ## Contributing Vending Machine Items
 
@@ -267,13 +312,13 @@ Vending machine items are another type of collectible that can be found by inter
 
 ### How to contribute Vending Machine Items?
 
-Every step is explained in <@286249320838332416>'s **vending machine tutorial document** that can be found right below. However, before submitting an item, there is a reservation process to follow:
+Every step is explained in stylzm's **vending machine tutorial document** that can be found right below. However, before submitting an item, there is a reservation process to follow:
 
 1. Reserve battle animation entries.
-2. Once you are **100% sure** your item is done and ready to be implemented for the next build, **contact a <@&1131723955233902712> to reserve a vending machine item slot** for it.
+2. Once you are **100% sure** your item is done and ready to be implemented for the next build, **contact a @Spirit Guide (Manager) to reserve a vending machine item slot** for it.
 3. You can now follow the tutorial and send us an update with the new items (don't forget to write it in the changelog)!
 
-This process is here to prevent overlapping of vending machine item IDs in case someone else has submitted an update with a new item.
+This process is here to prevent overlapping of vending machine item IDs in case someone else has submitted an update with a new item, and to make sure no empty slots are left in the big vending machine gallery on release.
 
 **[Vending machine tutorial PDF file](vending_machine_tutorial.pdf)**
 
@@ -293,7 +338,7 @@ Similar to vending machine items, there is a reservation process to follow befor
 > If your menu theme is obtained from interacting with an object, make sure you are sure of and have completed the designated location for it.
 > If your menu theme is obtained after an event, make sure the creation of that event is completed.
 
-2. Once you are 100% sure your menu theme is done and ready to be implemented, **contact a <@&1131723955233902712> to reserve a Menu Theme ID**.
+2. Once you are 100% sure your menu theme is done and ready to be implemented, **contact a @Spirit Guide (Manager) to reserve a Menu Theme ID**.
 3. Once you have been given your Menu Theme ID, edit **CE 29 - Reset Menu Theme**:
 
 - Scroll down to the bottom of the CE and create a new conditional branch. The easiest way to do so is to copy a previous entry.
@@ -329,19 +374,19 @@ Note: Menu Theme cubes are the recommended standard for all menu themes, but you
 
 Disclaimer: Although you have finished these tasks, note that your menu theme has **not been fully implemented yet**! Managers have to take care of updating CE 28 - Unlock Menu Theme, as well as implementing your menu theme in the book. By helping us with the tasks above, you can make things all the more easier for us <:uroSleep:1193890857452052561> 
 
-The reservation process is here to prevent overlapping of Menu Theme IDs in case someone else has submitted an update with a new menu theme.
+The reservation process is here to prevent overlapping of Menu Theme IDs in case someone else has submitted an update with a new menu theme, and to make sure no empty slots are left in the book on release.
 
 ## Contributing Terrains
 
 ![Minnatsuki chilling in the Nexus - The Return](assets/lake.png)
 
-## What are Terrains?
+### What are Terrains?
 
 Terrains allow for the different step sounds you hear in maps. Similar to vending machine items and menu themes, they require a reservation process.
 
 ### How to contribute Terrains?
 
-1. Once you are **100% sure** your terrain sound is ready for the next build, contact a <@&1131723955233902712> to reserve a Terrain ID. 
+1. Once you are **100% sure** your terrain sound is ready for the next build, contact a @Spirit Guide (Manager) to reserve a Terrain ID. 
 > Note that you will be given **2 IDs for a terrain**. Each terrain requires a regular ID, as well as an alternative ID (Alt). This is so Developers can implement shadow tinting via terrain in their maps if they wish.
 
 2. Once you have been given your Terrain ID, **edit CE 16 - Coord/Step Calc**:
@@ -372,4 +417,54 @@ Below is an example of how your entry should be formatted:
 
 5. Send us an update with the new terrain (don't forget the changelog)!
 
-This process is here to prevent overlapping of terrain IDs in case someone else has submitted an update with a new terrain.
+This reservation process is here to prevent overlapping of terrain IDs in case someone else has submitted an update with a new terrain.
+
+## Contributing Pseudo-eidola
+
+![Minnatsuki wearing a pseudo-eidolon](assets/wearing_pseudo.png)
+
+### What are Pseudo-eidola?
+Pseudo-eidola (often referred to as pseudos) are cosmetic changes to Minnatsuki outside the core supported eidola and boats and not encompassed in [custom protagonist sprites](https://docs.google.com/document/d/1eo9GmPM5MAAsaz1KWY_RLCBH8NZ1pUcQx6J3LlVsnMQ/edit?pli=1&tab=t.0#heading=h.mk2du8auk1jy). These can be equipped via any event but are commonly seen as outfits the player can pick up in the Spirit World. Pseudos can optionally have an action on the 1 key (this is added by modifying CE 13: Effect Action).
+
+### Pseudo-eidola guidelines
+All pseudo-eidola must follow the following guidelines.
+
+- Pseudo 1 key actions should be mainly cosmetic; there is no expectation for other developers to incorporate or accomodate your action like one would with eidola.
+- A pseudo’s home world or area (depending on continuity, like a themed route or sector) can have major interactions (like revealing collectibles and connections), but unrelated worlds should be limited to minor interactions that don’t strongly impact gameplay/are cosmetic (such as an NPC reacting to the pseudo), unless they are very well telegraphed (these will be judged on a case by case basis).
+- Interactions should make thematic sense and not be obtuse/obscure (for example, a maid or butler NPC reacting to the maid pseudo makes sense, but a random NPC with no telegraphed connection to maids or service workers reacting doesn’t).
+- All pseudos must fit within the standard 24x32 charset cell size, unless they are going to be only accessible in an isolated world where extra size can be accomodated.
+
+### How to contribute pseudo-eidola
+Follow the instructions present in the [Adding pseudo-eidola](https://docs.google.com/document/d/1eo9GmPM5MAAsaz1KWY_RLCBH8NZ1pUcQx6J3LlVsnMQ/edit?pli=1&tab=t.0#heading=h.mlu9st8wa7qe) section of the developer's handbook to create your pseudo.
+
+Modify CE 13: Effect Action if you wish to add a 1 key action.
+
+In the Debug Room, at (009,032), there is an event with basic code for equipping a pseudo. You are free to copy this into your world, just make sure to change all switches appropriately.
+
+Make sure to thoroughly playtest all actions (sitting on benches, climbing ladders, entering and exiting boats) and gestures to make sure implementation was done correctly! Include the pseudo's equip location in your changelog on submission.
+
+## Contributing Visages
+
+![Minnatsuki accessing the Visage menu](assets/visage_menu.png)
+
+### What are Visages?
+Visages are [pseudo-eidola](#contributing-pseudo-eidola) that can be equipped via the Visage eidolon at any time.
+
+### How to contribute Visages
+1. Once you are 100% sure your visage is done and ready to be implemented (make sure it follows all of the rules and guidelines seen above!), contact a @Spirit Guide (Manager) to reserve a Visage ID. If you did not create the visage and are just adding it to your world, make sure to tell the manager who created it. Your reservation will be denied if the visage is not completely ready!
+> If your visage is obtained from interacting with an object, make sure you are sure of and have completed the designated location for it. If your visage is obtained after an event, make sure the creation of that event is completed.
+2. Specify a switch for unlocking your visage.
+3. Once you have been given your Visage ID, edit CE 87: Visage Menu Check.
+> - Copy an existing block, starting with Conditional Branch: V[0175:Circle Menu - Temp5] ==
+> - Change both the outer and innermost conditional branches to point to your visage ID. 
+> - Change the middle conditional branch to use your visage unlock switch.
+4. Edit CE 88: Handle Visage.
+> - Copy an existing block, starting with Conditional Branch: V[0081:Circle Menu - Cursor] ==
+> - Change the conditional branch to point to your visage ID.
+> - Change the switch control to turn your visage equip switch on.
+5. Add a picture titled “pseudos_{3 digit ID}” that is 24x32, showing the front facing standing sprite of your visage.
+6. In the event where your visage is unlocked, add a block of code showing the unlock notification (see the Pseudo Equip event in the debug room at (009,032) for an example).
+7. Make sure to playtest thoroughly!
+8. Send us an update with the new visage (don't forget the changelog)!
+
+The reservation process is here to prevent overlapping of Visage IDs in case someone else has submitted an update with a new Visage, and to make sure no empty slots are left in the Visage menu on release.
