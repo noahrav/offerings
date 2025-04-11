@@ -3,7 +3,10 @@
         (+ added    * edited    - removed)
 
 Fill in what you need to, remove what you don't.
-Descriptions are optional but appreciated :D
+Include as much description as possible, especially for events and changed maps!
+Secret descriptions may be sent to managers separately from the changelog.
+
+Comments can be added under any entry using a bar |, preferably indented
 
 !! Credit the contributors you added assets from !!
 !! Don't add/modify common events without asking !!
@@ -16,13 +19,17 @@ Date: <DD/Mmm/YYYY> (ex. 01/Jan/2000)
 ---------------------------------------------------
 Map policy ... <MAP_POLICY>
 Asset policy ... <ASSET_POLICY>
+Comments ... (free comment section)
 ---------------------------------------------------
-+ MAP[XXXX] - <MAP_NAME>
-    + BGM <FILE_NAME> - map setting
-    * BGM <FILE_NAME> - event at (x,y)
++ MAP[XXXX] - <MAP_NAME> (<WORLD_NAME> (if it differs)) (Inaccessible (if applicable))
+    + BGM <FILE_NAME> (<VOLUME>%, <TEMPO>%) - map setting
+    * BGM <FILE_NAME> (<VOLUME>%, <TEMPO>%) - event at (x,y) (<DESCRIPTION> (this will be used as the record player blurb))
     + Connection from (x, y) to (x, y) in MAP[XXXX]
     * Connection from (x, y) to (x, y) in MAP[XXXX] (one-way)
     + Open/Closed connection at (x,y)
+	+ Menu theme <MENUTHEME_NAME> at (x, y) (as applicable)
+	+ Pseudo effect <PSEUDO_NAME> at (x, y) (as applicable)
+	| <DESCRIPTION> (optional)
 * MAP[XXXX] - <MAP_NAME>
 - MAP[XXXX] - <MAP_NAME>
 ---------------------------------------------------
