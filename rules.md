@@ -478,7 +478,7 @@ It is partially supported by EasyRPG Player, the engine used by the game, and mo
 
 For those wanting to get started with it, an English guide on installing the Maniac patch as well as using some of its commands is available here: https://www.rmteka.pl/in-english/
 
-Note that some commands/some parts of commands may not be accessible without using TPC, an external program that can be used with Maniac to manually write commands. If you are unfamiliar on how to write a specific command using TPC, you can check Jetrotal's Cold Spaghetti Analyser, allowing to check the formatting of commands using TPC: https://jetrotal.github.io/CSA/
+Note that some commands/some parts of commands may not be accessible without using TPC, an external program that can be used with Maniac to manually write commands. If you are unfamiliar with how to write a specific command using TPC, you can check Jetrotal's Cold Spaghetti Analyser, allowing to check the formatting of commands using TPC: https://jetrotal.github.io/CSA/
 
 While the patch can be used for developing on Collective Unconscious, some limitations will exist on commands:
 
@@ -492,11 +492,11 @@ Get Game Info - Get info of the game, such as the size of the map, the tileset I
 
 ### New Commands Allowed With Restrictions:
 
-Get Mouse Position - Get the X and Y coordinates of the mouse of the player. If the player is playing on mobile, this will instead track where the player has tapped on the screen in the window of the game, with the coordinates being kept as-is until being touched once more. (the difference between those two platforms implicate for instance that while on PC, a player could be expected to have their mouse follow a specific route to go from a point A to a point B, while on mobile, it could just teleport between the point A and B). Since mouse/touch control is a type of interaction not used in the base game, having this needs to make sense and be understandable for the player, especially if it is required to access content. Consider testing your content if it uses this command both on a computer and a mobile device if possible.
+Get Mouse Position - Get the X and Y coordinates of the mouse of the player. If the player is playing on mobile, this will instead track where the player has tapped on the screen in the window of the game, with the coordinates being kept as-is until being touched once more. (the difference between those two platforms implicate for instance that while on PC, a player could be expected to have their mouse follow a specific route to go from a point A to a point B, while on mobile, it could just teleport between the point A and B). Since mouse/touch control is not used in the base game, this feature needs to make sense and be understandable for players, especially if it is required to access content. Consider testing your content if it uses this command both on a computer and a mobile device if possible.
 
 Show String Picture - Display a picture where text can be typed. Can be combined with String Variables for even more flexibility. Do not use custom fonts outside of the ones provided in the Font folder of the game (requires to bundle a license with, and needs to deal with translations having to adjust to it if the needed characters are missing). Keep in mind that implementation of text is still reviewed on a case-by-case basis, per the guideline 12. Current implementation of this command in EasyRPG Player is not 100% accurate to how it is in Maniac: expect the display to potentially slightly change in the future.
 
-Key Input Processing EX - Allow to track the use of any key from the keyboard. While this command is allowed, mobile players lacking access to a keyboard, those players should not be prevented from enjoying the game to its fullest due to not playing on a computer. As such, if you plan to use this command, an alternative option must be presented for mobile players. Tracking keys that already exist in Key Input Processing is possible, and allow to be more precise for some shared keys such as the cancel or interaction keys, though keep in mind that all of the mouse keys are also not accessible on mobile. Since this is a type of interaction not normally used in the base game, having this needs to make sense and be understandable for the player, especially if it is required to access content. Do no track uncommon keys that wouldn't be found on most keyboards (F24, Stop Media key, Volume Down Key...), and do not track keys specific to regional keyboards (;:, -, /?, those types of keys). Buttons from a controller can be tracked in Maniac, but is unsupported in EasyRPG, so do not use this part of the command. Consider testing your content if it uses this command both on a computer and a mobile device if possible.
+Key Input Processing EX - Allow to track the use of any key from the keyboard. While this command is allowed, mobile players lacking access to a keyboard, those players should not be prevented from enjoying the game to its fullest due to not playing on a computer. As such, if you plan to use this command, an alternative option must be presented for mobile players. Tracking keys that already exist in Key Input Processing is possible, and allow to be more precise for some shared keys such as the cancel or interaction keys, though keep in mind that all of the mouse keys are also not accessible on mobile. Since this type of interaction is not normally used in the base game, this feature needs to make sense and be understandable for players, especially if it is required to access content. Do not track uncommon keys that wouldn't be found on most keyboards (F24, Stop Media key, Volume Down Key...), and do not track keys specific to regional keyboards (;:, -, /?, those types of keys). Buttons from a controller can be tracked in Maniac, but is unsupported in EasyRPG, so do not use this part of the command. Consider testing your content if it uses this command both on a computer and a mobile device if possible.
 
 Rewrite Map - Allow to rewrite tiles of the map, with changes not being saved when leaving the map or saving and reloading the save. Do not use out of bounds and invalid tiles. Partial A and B autotiles are currently unsupported by EasyRPG Player, so do not use them.
 
@@ -504,7 +504,7 @@ Call Command - Allow to indirectly call another command. Only recommended for ad
 
 ### Forbidden Commands:
 
-Get Save Info - Get info from a save file by specifying a save ID. Info in question is when the save file was last saved, the level (Number of Eidola + 1) and HP of the first character in the party (Minnatsuki), as well as the FaceSet of each member of the party (just Minnatsuki). No purpose here: the current save file used by the player is not known, so no real way to know when they last saved. Outside of that, knowing the current level and HP of the player can already be tracked, with knowing the previous values not being of much use, and the FaceSet of Minnatsuki is predefined when saving so already known, meaning that none of this should be used. 
+Get Save Info - Get info from a save file by specifying a save ID. Info in question is when the save file was last saved, the level (Number of Eidola + 1) and HP of the first character in the party (Minnatsuki), as well as the FaceSet of each member of the party (just Minnatsuki). This command has no purpose here: the current save file used by the player is not known, so there is no real way to know when they last saved. Outside of that, knowing the current level and HP of the player can already be tracked, with knowing the previous values not being of much use, and the FaceSet of Minnatsuki is predefined when saving so already known, meaning that none of this should be used. 
 
 Save - Do a save by specifying a save ID. Saving outside of Minnatsuki's Room is outside of the scope of the game, so this command should not be used.
 
@@ -522,15 +522,15 @@ Change Battle Command EX - Edit some of the commands of the battle system, which
 
 Get Battle Info - Get infos on the current battle, though the battle system is not used by this game.
 
-Control Global Save - Allow to write data to a save file shared between the different save slots. Data here wouldn't be reliable, due to the player being potentially expected to switch between playing on PC and on mobile, with the global save not being shared between the different devices.
+Control Global Save - Allow to write data to a save file shared between the different save slots. Data here wouldn't be reliable, since the player may potentially switch between playing on PC and on mobile, with the global save not being shared between the different devices, and importing an existing save file in a private tab or new browser wouldn't have the global save either.
 
 Change Picture ID - Change the ID of a picture. Currently unimplemented by EasyRPG Player.
 
-Set Game Option - Adjust some settings of the game throughout its entirety. Currently unimplemented by EasyRPG Player, and those settings wouldn't be useful since most of them are for debug purposes.
+Set Game Option - Adjust some settings of the game throughout its entirety. Currently unimplemented by EasyRPG Player. These settings wouldn't be useful since most of them are for debug purposes.
 
 ### Expanded Commands
 
-When using an expanded command, it is highly recommended to add a comment above it in the code to specify that the command uses the Maniac patch, especially if the code in question is expected to be checked and edited by other developers and managers. Editing the command using the vanilla editor could remove the added functions by error, potentially breaking how the command was expected to work.
+When using an expanded command, it is highly recommended to add a comment above it in the code to specify that the command uses the Maniac patch, especially if the code in question is expected to be checked and edited by other developers and managers. Editing the command using the vanilla editor could accidentally remove the added functions, potentially breaking how the command was expected to work.
 
 ### Expanded Commands Without Restrictions:
 
@@ -572,4 +572,4 @@ Battle Processing - The flash can now be disabled when a battle is set to start.
 
 ### Other
 
-If a command or expanded command is not mentioned, but you would still like to use it, ask to a manager if using it wouldn't be an issue, and make sure that the command is properly supported in the EasyRPG Player and fully accurate to the Maniac patch.
+If a command or expanded command is not mentioned, but you would still like to use it, ask to a @spirit Guide (Manager) if using it wouldn't be an issue, and make sure that the command is properly supported in the EasyRPG Player and fully accurate to the Maniac patch.
