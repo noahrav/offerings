@@ -534,10 +534,6 @@ When using an expanded command, it is highly recommended to add a comment above 
 
 ### Expanded Commands Without Restrictions:
 
-Show Picture - Horizontal/vertical inversion, angle designation, blending mode, origin specification, and variable number for some of its parameters were added.
-
-Move Picture - Horizontal/vertical inversion, angle designation, blending mode, origin specification, and variable number for some of its parameters were added. A negative move time is now handled in frames.
-
 Play BGM - Values can be replaced by variables, and the name of the file can be replaced by a String Variable. Make sure to list for managers in the changelog the name and values to be used in the Record Player.
 
 Play SE - Values can be replaced by variables, and the name of the file can be replaced by a String Variable.
@@ -549,6 +545,10 @@ Loop - It is now possible to adjust how many times the loop loops, or until some
 Break Loop - Fixed an issue where the indenting was incorrect when called in a multiple loop.
 
 ### Expanded Commands With Restrictions:
+
+Show Picture - Horizontal/vertical inversion, angle designation, blending mode, origin specification, and variable number for some of its parameters were added. Do not use these features for pictures intended to be synched, as they are currently not supported for synching.
+
+Move Picture - Horizontal/vertical inversion, angle designation, blending mode, origin specification, and variable number for some of its parameters were added. A negative move time is now handled in frames. Do not use these features for pictures intended to be synched, as they are currently not supported for synching.
 
 Erase Picture - Variable number for some of its parameters were added. Erasing All Pictures was added, but is not authorised to be used to avoid conflicting with system pictures.
 
