@@ -33,6 +33,8 @@ The game is exclusively made for an online multiplayer experience, and hosted un
 
 - [Contributing Visages](#contributing-visages)
 
+- [Maniac Patch Guidelines](#maniac-patch-guidelines)
+
 ## What's a Developer? What's a Contributor?
 
 ![Minnatsuki's bedroom](assets/bedroom.png)
@@ -468,3 +470,106 @@ Visages are [pseudo-eidola](#contributing-pseudo-eidola) that can be equipped vi
 8. Send us an update with the new visage (don't forget the changelog)!
 
 The reservation process is here to prevent overlapping of Visage IDs in case someone else has submitted an update with a new Visage, and to make sure no empty slots are left in the Visage menu on release.
+
+## Maniac Patch Guidelines
+
+Maniac patch is a patch for RPG Maker 2003 which adds a lot of new commands, and expands some commands.
+It is partially supported by EasyRPG Player, the engine used by the game, and most of its features are supported (a status on the support of commands in EasyRPG Player can be found here: https://github.com/EasyRPG/Player/issues/1818).
+
+For those wanting to get started with it, an English guide on installing the Maniac patch as well as using some of its commands is available here: https://www.rmteka.pl/in-english/
+
+Note that some commands/some parts of commands may not be accessible without using TPC, an external program that can be used with Maniac to manually write commands. If you are unfamiliar with how to write a specific command using TPC, you can check Jetrotal's Cold Spaghetti Analyser, allowing to check the formatting of commands using TPC: https://jetrotal.github.io/CSA/
+
+While the patch can be used for developing on Collective Unconscious, some limitations will exist on commands:
+
+### New Commands Allowed Without Restrictions:
+
+Get Picture Info - Get info of a picture.
+
+Control Var Array - Allow to edit an array of variables.
+
+Get Game Info - Get info of the game, such as the size of the map, the tileset ID, the screen position...
+
+### New Commands Allowed With Restrictions:
+
+Get Mouse Position - Get the X and Y coordinates of the mouse of the player. If the player is playing on mobile, this will instead track where the player has tapped on the screen in the window of the game, with the coordinates being kept as-is until being touched once more. (the difference between those two platforms implicate for instance that while on PC, a player could be expected to have their mouse follow a specific route to go from a point A to a point B, while on mobile, it could just teleport between the point A and B). Since mouse/touch control is not used in the base game, this feature needs to make sense and be understandable for players, especially if it is required to access content. Consider testing your content if it uses this command both on a computer and a mobile device if possible.
+
+Show String Picture - Display a picture where text can be typed. Can be combined with String Variables for even more flexibility. Do not use custom fonts outside of the ones provided in the Font folder of the game (requires to bundle a license with, and needs to deal with translations having to adjust to it if the needed characters are missing). Keep in mind that implementation of text is still reviewed on a case-by-case basis, per the guideline 12. Current implementation of this command in EasyRPG Player is not 100% accurate to how it is in Maniac: expect the display to potentially slightly change in the future.
+
+Key Input Processing EX - Allow to track the use of any key from the keyboard. While this command is allowed, mobile players lacking access to a keyboard, those players should not be prevented from enjoying the game to its fullest due to not playing on a computer. As such, if you plan to use this command, an alternative option must be presented for mobile players. Tracking keys that already exist in Key Input Processing is possible, and allow to be more precise for some shared keys such as the cancel or interaction keys, though keep in mind that all of the mouse keys are also not accessible on mobile. Since this type of interaction is not normally used in the base game, this feature needs to make sense and be understandable for players, especially if it is required to access content. Do not track uncommon keys that wouldn't be found on most keyboards (F24, Stop Media key, Volume Down Key...), and do not track keys specific to regional keyboards (;:, -, /?, those types of keys). Buttons from a controller can be tracked in Maniac, but is unsupported in EasyRPG, so do not use this part of the command. Consider testing your content if it uses this command both on a computer and a mobile device if possible.
+
+Rewrite Map - Allow to rewrite tiles of the map, with changes not being saved when leaving the map or saving and reloading the save. Do not use out of bounds and invalid tiles. Partial A and B autotiles are currently unsupported by EasyRPG Player, so do not use them.
+
+Call Command - Allow to indirectly call another command. Only recommended for advanced users. Make sure you're only calling correct commands using this.
+
+### Forbidden Commands:
+
+Get Save Info - Get info from a save file by specifying a save ID. Info in question is when the save file was last saved, the level (Number of Eidola + 1) and HP of the first character in the party (Minnatsuki), as well as the FaceSet of each member of the party (just Minnatsuki). This command has no purpose here: the current save file used by the player is not known, so there is no real way to know when they last saved. Outside of that, knowing the current level and HP of the player can already be tracked, with knowing the previous values not being of much use, and the FaceSet of Minnatsuki is predefined when saving so already known, meaning that none of this should be used. 
+
+Save - Do a save by specifying a save ID. Saving outside of Minnatsuki's Room is outside of the scope of the game, so this command should not be used.
+
+Load - Load an existing save file by specifying a save ID. Loading a save outside of Minnatsuki's Room is outside of the scope of the game, so this command should not be used.
+
+End Load Process - Command with no effect, do not use it.
+
+Set Mouse Position - Not supported nor planned for EasyRPG Player (system specific not exposed by SDL).
+
+Control Battle - Control some commands of the battle system, which is not used by this game.
+
+Control ATB Gauge - Control the ATB gauge of the battle system, which is not used by this game.
+
+Change Battle Command EX - Edit some of the commands of the battle system, which is not used by this game.
+
+Get Battle Info - Get infos on the current battle, though the battle system is not used by this game.
+
+Control Global Save - Allow to write data to a save file shared between the different save slots. Data here wouldn't be reliable, since the player may potentially switch between playing on PC and on mobile, with the global save not being shared between the different devices, and importing an existing save file in a private tab or new browser wouldn't have the global save either.
+
+Change Picture ID - Change the ID of a picture. Currently unimplemented by EasyRPG Player.
+
+Set Game Option - Adjust some settings of the game throughout its entirety. Currently unimplemented by EasyRPG Player. These settings wouldn't be useful since most of them are for debug purposes.
+
+### Expanded Commands
+
+When using an expanded command, it is highly recommended to add a comment above it in the code to specify that the command uses the Maniac patch, especially if the code in question is expected to be checked and edited by other developers and managers. Editing the command using the vanilla editor could accidentally remove the added functions, potentially breaking how the command was expected to work.
+
+### Expanded Commands Without Restrictions:
+
+Play BGM - Values can be replaced by variables, and the name of the file can be replaced by a String Variable. Make sure to list for managers in the changelog the name and values to be used in the Record Player.
+
+Play SE - Values can be replaced by variables, and the name of the file can be replaced by a String Variable.
+
+Wait - Variables can now be used.
+
+Loop - It is now possible to adjust how many times the loop loops, or until something occurs.
+
+Break Loop - Fixed an issue where the indenting was incorrect when called in a multiple loop.
+
+### Expanded Commands With Restrictions:
+
+Show Picture - Horizontal/vertical inversion, angle designation, blending mode, origin specification, and variable number for some of its parameters were added. Do not use these features for pictures intended to be synched, as they are currently not supported for synching.
+
+Move Picture - Horizontal/vertical inversion, angle designation, blending mode, origin specification, and variable number for some of its parameters were added. A negative move time is now handled in frames. Do not use these features for pictures intended to be synched, as they are currently not supported for synching.
+
+Erase Picture - Variable number for some of its parameters were added. Erasing All Pictures was added, but is not authorised to be used to avoid conflicting with system pictures.
+
+Conditional Branch - Variable reference, variable of the variable number, comparing a variable to a variable were added. It is also possible to check if the save file has just been loaded, if a controller is enabled, or if the window of the game is active or not, but those conditions should not be used (unsupported by EasyRPG Player + the player is not loading a save when reaching your map anyways; player may or may not have a controller, and using a controller or not does not change the keys, so locking content behind that wouldn't make sense; mobile players cannot necessarily easily go on another window without possibly encountering issues, in addition to not making sense).
+
+Key Input Processing - Mouse left, mouse right, and mouse middle can now be tracked. While playing on mobile, mouse left corresponds to using one finger on the screen, mouse right two fingers, and mouse middle three. Since this is a type of interaction not normally used in the base game, having this needs to make sense and be understandable for the player independently of the platform, especially if it is required to access content. Wheel up and wheel down can also be tracked, but cannot be used on mobile. As such, if you plan to use this command, an alternative option must be presented for mobile players. Consider testing your content if it uses this command both on a computer and a mobile device if possible.
+
+Control Variables - A lot of new options were added for this command: make sure to tick in the Options of the editor "Use new 'Control Variables'" to have access to them. Do not track the date, time, number of frames elapsed, current version of Maniac patch, anything tied to the battle system, and anything in terms of switches, variables, and system that you shouldn't touch. The expression format is not fully supported by EasyRPG Player, so do not use it.
+
+Call Event - A common event can now be called by a variable number. Make sure you call a valid common event.
+
+Control String Variables - Allow to store text in a new set of variables called String Variables. This command can be used in a lot of different ways, but notably for displaying text, or for storing filenames for use in existing commands. Ranges for the variables are the following: 1-20, local variables, 21-100, system variables, 100+, developer variables per batch of 10, to be requested to your nearest manager. It is possible to extract text from a text file using this command, located in the Text folder. Developers wanting to use a text file should have their be put in a subfolder of the Text folder, named after their developer name. While this command allows to write data to a text file, you are not allowed to do that. Text expected to be translatable in other languages should not be put in a text file, due to not wanting to deal with conflict issues depending on the language, and should not be taken from an untranslatable field, such as the name of an event or the name of an element in the database. Elements expected to be translated should not be kept in memory after returning to the real room, to avoid them from being made untranslatable if the player were to change their language. Do not take data from a field you're not supposed to look into (e.g. skill list, tileset list...). If you use this command to show text, keep in mind that implementation of text is still reviewed on a case-by-case basis, per the guideline 12.
+
+Erase Event - Can now be used to bring back an erased event, and can be supplied an ID. Make sure to call a working event.
+
+Scroll Map - It is now possible to move the camera per pixel. Make sure it is properly reset when leaving your area.
+
+### Forbidden Expanded Commands:
+
+Battle Processing - The flash can now be disabled when a battle is set to start. Not to be used since the battle system is not used in this game.
+
+### Other
+
+If a command or expanded command is not mentioned, but you would still like to use it, ask to a @spirit Guide (Manager) if using it wouldn't be an issue, and make sure that the command is properly supported in the EasyRPG Player and fully accurate to the Maniac patch.
